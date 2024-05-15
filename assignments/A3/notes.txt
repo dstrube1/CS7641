@@ -1,0 +1,48 @@
+README.txt
+dstrube3-analysis.pdf
+
+Unsupervised Learning and Dimensionality Reduction
+
+https://gatech.instructure.com/courses/122126/assignments/557954
+
+six algorithms:
+
+2 clustering algorithms:
+k-means clustering
+Expectation Maximization
+
+4 dimensionality reduction algorithms:
+PCA
+ICA
+Randomized Projections
+Any other feature selection algorithm you desire
+
+two datasets from 1st assignment
+
+Useful additional info:
+https://github.gatech.edu/omscs6601/assignment_5/tree/master/read
+https://github.gatech.edu/omscs6601/assignment_5/blob/master/solution.ipynb
+https://www.scikit-yb.org/en/latest/api/cluster/elbow.html
+https://www.youtube.com/watch?v=Lsue2gEM9D0&ab_channel=StatQuestwithJoshStarmer
+http://mlsp.cs.cmu.edu/courses/fall2012/lectures/ICA_Hyvarinen.pdf
+https://www.cs.helsinki.fi/u/ahyvarin/papers/bookfinal_ICA.pdf
+https://piazza.com/class/kdx36x23bcer4?cid=659
+
+can login with ga tech account:
+https://learning.oreilly.com/library/view/hands-on-unsupervised-learning/9781492035633/ch03.html
+
+the PCA is performed on the training data, but we should take the transformation that was computed for the training PCA and apply the same exact transformation to the test data
+e.g.
+PCA.fit(x_train)
+PCA.transform(x_train)
+PCA.transform(x_test)
+
+that way the reduction is trained on the x_train data, but the x_test data still receives the reduction
+
+https://stats.stackexchange.com/questions/388740/using-pca-to-reduce-dimensionality-of-training-and-testing-data
+
+The PCA, once fit, is not changed by the transform so it will not learn anything from the test set.
+
+https://online.stat.psu.edu/stat505/lesson/11/11.5
+https://sebastianraschka.com/Articles/2014_about_feature_scaling.html#z-score-standardization-or-min-max-scaling
+https://www.youtube.com/watch?v=REypj2sy_5U&ab_channel=VictorLavrenko

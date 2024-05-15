@@ -1,0 +1,29 @@
+next time:
+dataset 1: fashion mnist
+https://www.openml.org/d/40996
+dataset 2: handwritten digits mnist dataset
+https://www.openml.org/d/554
+
+why they're interesting (do NOT copy this verbatim):
+One very interesting aspect of the MNIST dataset is the variation in the number themselves. Each number is handwritten so the number five written by one person can look vastly different from another five written by a different person. The Fashion MNIST dataset is much more spread which alludes to one of the reasons it is more of a difficult dataset to work with. One reason for this is that the dataset used many more pixel intensities than the MNIST dataset
+
+algorithms used in each assignment:
+
+A1:
+Decision trees with some form of pruning (DT)
+Neural networks (NN)
+Boosting
+Support Vector Machines (SVM)
+k-nearest neighbors (KNN)
+
+A2:
+	NN with:
+randomized hill climbing (RHC)
+simulated annealing (SA)
+genetic algorithm (GA)
+MIMIC
+
+A3:
+
+
+

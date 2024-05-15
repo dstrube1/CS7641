@@ -1,0 +1,19 @@
+PCA:
+
+computerphile's explanation:
+https://www.youtube.com/watch?v=TJdH6rPA-TI
+
+https://builtin.com/data-science/step-step-explanation-principal-component-analysis
+
+https://www.tutorialspoint.com/scikit_learn/scikit_learn_clustering_performance_evaluation.htm
+
+https://www.andrew.cmu.edu/user/georgech/95-865/Lectures/Lecture%20-%2005_essence.pdf
+
+https://www.mathworks.com/help/stats/evalclusters.html
+
+https://scikit-learn.org/stable/modules/clustering.html
+
+https://stats.stackexchange.com/questions/97704/does-ica-require-to-run-pca-first
+
+https://stats.stackexchange.com/questions/122472/why-do-we-whiten-the-data-before-running-ica
+

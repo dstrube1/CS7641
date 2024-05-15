@@ -1,0 +1,31 @@
+manhattan distance:
+starting point x has coordinates a,b (eg 1,6)
+end point q has coordinates d,e (eg, 4,2)
+md: |a-d| + |b-e| (eg (1-4 = 3) + (6-2 = 4) = 7)
+
+euclidean distance ^ 2:
+1-4 = 3, ^2 = 9
+6-2 = 4, ^2 = 16
++=25
+
+curse of dimensionality for machine learning:
+as the number of features or dimensions grows, the amount of data we need in order to generalize accurately grows exponentially
+
+5. Ensemble Learning An Example?:
+Bagging / Bootstrap aggregate?
+
+Boosting :
+- take something that has possibly very high error but always less than 1/2 (error?) and turn it into something that has very low error
+
+error:
+1- # mismatches / number of possible guesses or size of data
+2- Probability with a distribution that a hypothesis does not equal true concept of some particular instance X
+
+Weak learner:
+does better than chance always
+:
+For all distributions D, Probability <= 1/2 - E error
+
+sigmoid(z) = 1 / (1+e^-z)
+if z is large, s(z) -> 1 / (1 + 0) = 1
+if z is big neg, s(z) -> 1 / (1 + big) -> 0

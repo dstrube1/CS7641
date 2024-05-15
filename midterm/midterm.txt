@@ -1,0 +1,83 @@
+RBF -> KNN
+https://scikit-learn.org/stable/auto_examples/svm/plot_rbf_parameters.html
+KNN -> Boosting
+https://www.sciencedirect.com/science/article/pii/S0925231210003358
+KNN -> SVM
+https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC
+
+-> = how is it similar to... ?
+
+study midterm solutions
+
+chapter summaries:
+3 = 76
+4 = 122
+6 = 197
+7 = 225
+8 = 245 
+9 = 268 <- leftoff
+
++12p diff
+
+#2 here:
+http://www.cs.cmu.edu/~aarti/Class/10701/exams/midexample-solutions.pdf
+
+T or F:
+
+The training error of 1-NN classifier is 0.
+True: Each point is its own neighbor, so 1-NN classifier achieves perfect classification on training data
+
+Cross validation can be used to select the number of iterations in boosting; this procedure may help reduce overfitting.
+True: The number of iterations in boosting controls the complexity of the model, therefore, a model selection procedure like cross validation can be used to select the appropriate model complexity and reduce the possibility of overfitting.
+
+The kernel density estimator is equivalent to performing kernel regression with the value Yi = 1/n at each point Xi in the original data set.
+False: Kernel regression predicts the value of a point as the weighted average of the values at nearby points, therefore if all of the points have the same value, then kernel regression will predict a constant (in this case, 1/n) for all values.
+
+We learn a classifier f by boosting weak learners h. The functional form of f’s decision boundary is the same as h’s, but with different parameters. (e.g., if h was a linear classifier, then f is also a linear classifier).
+False: For example, the functional form of a decision stump is a single axis-aligned split of the input space, but the functional form of the boosted classifier is linear combinations of decision stumps which can form a more complex (piecewise linear) decision boundary.
+
+The depth of a learned decision tree can be larger than the number of training examples used to create the tree.
+False: Each split of the tree must correspond to at least one training example, therefore, if there are n training examples, a path in the tree can have length at most n.
+
+here:
+http://www.cs.cmu.edu/~aarti/Class/10701/exams/midterm2010f_sol.pdf
+"For the following problems, circle the correct answers:"
+1 & 2
+&
+"Consider training a boosting classifier"
+
+Why do we want to use “weak” learners when boosting?
+Solution: To prevent overfitting, since the complexity of the overall learner increases at
+each step. 
+
+In AdaBoost, weighted training error of the weak classifier on training data with weights Dt tends to increase as a function of t.
+True. In the course of boosting iterations the weak classifiers are forced to try to classify more difficult examples. 
+
+AdaBoost will eventually give zero training error regardless of the type of weak classifier it uses, provided enough iterations are performed.
+False if the data in the training set cannot be separated by a linear combination of the specific type of weak classifiers we are using.
+
+Why does the kernel trick allow us to solve SVMs with high dimensional feature spaces, without significantly increasing the running time?
+In the dual formulation of the SVM, features only appear as dot products which can be represented compactly by kernels
+
+Consider a learning problem with 2D features. How are the decision tree and 1-nearest neighbor decision boundaries related?
+In both cases, the decision boundary is piecewise linear. Decision trees do axis-aligned splits while 1-NN gives a voronoi diagram.
+
+http://www.cs.cmu.edu/~aarti/Class/10701/exams/midterm2007s-solution.pdf
+"You are a reviewer for the International Mega-Conference"
+review all answers, except #13- that one's bullshit
+
+also:
+"SVMs and the slack"
+"Irrelevant Features"
+
+http://www.cs.cmu.edu/~aarti/Class/10701/exams/midterm2006-solution.pdf
+Show that Pr(X,Y|Z) = Pr(X|Z)*Pr(Y|Z) if Pr(X|Y,Z) = Pr(X|Z)
+(chain rule): Pr(X,Y|Z) = Pr(X|Y,Z)*Pr(Y|Z)
+						= Pr(X|Z)*Pr(Y|Z)
+
+===
+Midterm Grade
+Strube, David Alan
+Score: 24
+Breakdown: Q1(a) : 0, Q1(b) : 1, Q1(c) : 0, Q1(d) : 0, Q1(e) : 0, Q1(f) : 1, Q1(g) : 2, Q1(h) : 0, Q1(i) : 0, Q1(j)
+: 0, Q2 : 2, Q3 : 0, Q4 : 3, Q5 : 11, Q6 : 0, Q7 : 0, Q8 : 4

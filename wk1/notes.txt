@@ -1,0 +1,74 @@
+https://omscs-study.slack.com/archives/C08LK14DV/p1597630278096900
+Mlrose is for assignment 2 though the canonical choice is abagail which was done by the instructors
+Assignment 1,3 in sklearn. Assignment 4 can be in burlap (by littman) or maybe pymdptoolbox
+
+sklearn docs:
+https://omscs-study.slack.com/archives/C08LK14DV/p1597637065107400
+
+datasets:
+In my search for datasets to potentially use, so far I've seen recommended as dataset repositories
+OpenML: https://www.openml.org/search?type=data
+UCI Repository: https://archive.ics.uci.edu/ml/datasets.php
+Kaggle: https://www.kaggle.com/
+rreddit/datasets: https://www.reddit.com/r/datasets/
+Any others worth checking out people have found? (edited) 
+
+google dataset search: https://datasetsearch.research.google.com/
+CMU dataset repo: https://guides.library.cmu.edu/machine-learning/datasets
+python has built in datasets in sklearn:
+load_boston([return_X_y]): Load and return the boston house-prices dataset (regression).
+load_iris([return_X_y]): Load and return the iris dataset (classification).  (Not recommended for assignments)
+load_diabetes([return_X_y]): Load and return the diabetes dataset (regression).
+load_digits([n_class, return_X_y]): Load and return the digits dataset (classification).
+load_linnerud([return_X_y]): Load and return the linnerud dataset (multivariate regression).
+You can get data directly from the federal government: https://www.data.gov/ (edited) 
+
+ML: applied computational statistics
+	building computational artifacts that learn over time based experience
+	
+cs7641:
+	supervised learning - function approximation; taking labeled dataset, gleaning information from it so that you can label new datasets; input: 1,2,3,4,5; output: 1,4,9,16,25; f(x)= x^2; optimization: looking for a function that labels data well; classification: discrete output; regression: continuous output
+	unsupervised learning - automatic data description- taking data and figuring out how to divide it up;  summarization; input: pixels, output: male, female, etc; optimization: looking for function that clusters scores well
+	reinforcement learning - learning from delayed reward; playing a game without knowing the rules, but learning when you lose; optimization: looking for function that behavior scores well
+
+classification learning:
+instances: input
+concept: function that maps input to output
+target concept: answer we're looking for
+hypothesis class: set of considerable functions
+sample: training set: {input, output} pairs
+candidate: concept =? target concept
+testing set: set with which to test with candidate; should not intersect with sample
+
+decision tree:
+representation vs algorithm
+algorithm:
+1- pick best attribute (best: splits the data)
+2- ask question
+3- follow answer path
+4- repeat until answer or give up
+
+ID3:
+Gain: reduction in randomness over labels that you have with a set of data based upon knowing the value of a particular attribute
+S: collection of training examples that you're looking at
+A: particular attribute
+best attribute is one with maximum Gain
+Gain(S,A) = (entropy of S) - avg entropy that you would have over each set of examples that you have with a particular value
+entropy: measure of randomness
+heads-tails coin flip: 1 bit of entropy (0.5 probability of heads)
+heads-heads coin flip: 0 bit of entropy (1.0 probability of heads)
+entropy = -1 * sum for all v: (p(v)*log p(v))
+p(v): probability of a value
+
+Bias:
+restriction bias: ID3 looks only for hypotheses for decision trees (not quadratic equations, etc)
+preference bias: ID3 prefers hypotheses that we're looking for
+<=>inductive bias: 1- good splits at the top; 2- correct over incorrect; 3- short trees over long trees
+
+Choosing the Training Experience:
+1- whether the training experience provides direct or indirect feedback
+2- degree to which the learner controls the sequence of training examples
+3- well training experience  represents the distribution of examples
+distribution of training examples should be identical to the distribution of test examples
+
+

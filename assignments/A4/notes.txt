@@ -1,0 +1,11 @@
+README.txt
+dstrube3-analysis.pdf
+
+Markov Decision Processes
+
+https://gatech.instructure.com/courses/122126/assignments/557938
+
+two interesting MDPs
+make sure one has a "small" number of states, and the other has a "large" number of states
+200 is not large
+

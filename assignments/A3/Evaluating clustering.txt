@@ -1,0 +1,21 @@
+from https://piazza.com/class/kdx36x23bcer4?cid=638
+
+What metrices are people finding helpful in evaluating clusters (without labels)? I have used sum of squared errors (inertia in sklearn) and silhouette but haven't been getting much insight from either.
+
+If you are using metrics where you don't know the ground truth, there's really only three metrics that scikit offers:
+
+Inertia: Sum of squared distances of samples to their closest cluster center.
+Generally want to use the Elbow Method: https://en.wikipedia.org/wiki/Elbow_method_(clustering)
+
+Silhouette: A measure comparing distance between a sample and other members of the same class, and a sample and all other points in the next nearest cluster
+https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html#sphx-glr-auto-examples-cluster-plot-kmeans-silhouette-analysis-py
+You will generally want to maximize this
+
+Davies-Bouldin Index: Measures the average "similarity" between clusters, which compares distance between clusters with the size of the clusters themselves
+Similar to Silhouette ultimately but you will generally want to minimize this
+
+Ultimately just make a choice and use it as the best option and justify it. If your data has 5 classes and your inertia/silo say you should have three, use it and discuss why this might be. It might also help to plot out the clusters formed by 2-3 variables. Do a PCA to figure out the 2-3 most important features and use those for the plots is generally best.
+
+What do you mean by ground truth? labels? If you do have the ground truth what plots would you recommend?
+
+Take a look at 2.3.10 Clustering Performance Evaluation - https://scikit-learn.org/stable/modules/clustering.html#k-means you'd want something like Adjusted Rand Index or V-Measure. But for this assignment you shouldn't use those values for actually deciding on clusters for anything, assume you don't know the labels.

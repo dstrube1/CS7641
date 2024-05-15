@@ -1,0 +1,47 @@
+As:
+ANN - Artificial Neural Network
+CCP - Cost Complexity Pruning
+CNN - Convolutional Neural Network
+DT  - Decision Tree
+EM  - Expectation-Maximization
+GA  - Genetic Algorithms
+HAC - Hierarchical Agglomerative Clustering
+HP  - Hyperparameter
+ICA - Independent Component Analysis 
+ID3 - Iterative Dichotomiser 3
+IID - Independent & identically distributed
+KDD - Knowledge Discovery and Data mining
+KNN - k-Nearest Neighbors
+LGQ - Linear–quadratic–Gaussian 
+	https://en.wikipedia.org/wiki/Linear%E2%80%93quadratic%E2%80%93Gaussian_control
+LLM - Linear Learning Machine; eg SVM
+MAP - Maximum A Posteriori
+MCC - Model Complexity Curve
+	the change in performance/accuracy as you change a given hyper parameter
+MIMIC-Mutual Information Maximizing Input Clustering
+ML  - Maximum likelihood (soft clustering)
+MST - Maximum spanning tree
+NFLT- No free lunch theorem (of optimization)
+NN  - Neural Network OR Nearest Neighbor
+PAC - Probably approximately correct
+	https://en.wikipedia.org/wiki/Probably_approximately_correct_learning
+PCA - Principal Component Analysis
+RBF - Radial Basis Function
+ReLU- Rectified Linear Unit
+RHC - Randomized Hill Climbing
+RNN - Recurrent Neural Network
+RO  - Randomize Optimization
+SA  - Simulated Annealing
+SGD - Stochastic Gradient Descent
+SGN - sign
+SL  - Supervised Learning
+SLC - Single Linkage Clustering
+SVC - Support Vector Classification
+SVD - Singular Value Decomposition 
+SVM - Support Vector Machines
+TA  - Teaching assistant
+TSP - Traveling Salesman Problem
+UL  - Unsupervised Learning
+VC  - Vapnik-Chervonenkis dimension
+	https://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_dimension
+

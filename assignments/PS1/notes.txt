@@ -1,0 +1,42 @@
+https://s3.amazonaws.com/ml-class/Problem_Set_1.pdf
+
+
+1 
+For almost every case we have discussed where we are doing supervised learning, we have assumed a
+deterministic function. Imagine instead a world where we are trying to capture a non-deterministic function.
+In this case, we might see training pairs where the x value appears several times, but with different y values.
+For example, we might be mapping attributes of humans to whether they are likely to have had chicken pox.
+In that case, we might see the same kind of person many times but sometimes they will have had chicken
+pox, sometimes not.
+We would like to build a learning algorithm that will compute the probability that a particular kind of
+person has chicken pox. So, given a set of training data where each x is mapped to 1 for true or 0 for false:
+1. Derive the proper error function to use for finding the ML hypothesis using Bayes Rule. You should
+go through a similar process as the one used to derive least squared error in the lessons.
+https://en.wikipedia.org/wiki/Least_squares
+
+2. Compare and contrast your result to the rule we derived for a deterministic function perturbed by
+zero-mean gaussian noise. What would a normal neural network using sum of squared errors do with
+these data? What if the data consisted of x,y pairs where y was an estimate of the probability instead
+of 0s and 1s?
+
+2
+Design a two-input perceptron that implements the boolean function 𝐴∧¬𝐵. Design a two-layer network
+of perceptrons that implements 𝐴 ⊕ 𝐵 (⊕ is XOR).
+https://towardsdatascience.com/perceptrons-logical-functions-and-the-xor-problem-37ca5025790a
+http://www.inf.unibz.it/~zini/ML/slides/ml_2012_lab_05_solutions.pdf
+
+4
+Explain how you can use Decision Trees to perform regression? Show that when the error function
+is squared error, then the expected value at any leaf is the mean. Take the Boston Housing dataset
+(https://archive.ics.uci.edu/ml/datasets/Housing) and use Decision Trees to perform regression.
+
+6
+Imagine you had a learning problem with an instance space of points on the plane and a target function that you knew took the form of a line on the plane where all points on one side of the line are positive and all those on the other are negative. If you were constrained to only use decision tree or nearest-neighbor learning, which would you use? Why?
+https://datascience.stackexchange.com/questions/9228/decision-tree-vs-knn
+
+7
+Give the VC dimension of the following hypothesis spaces. Briefly explain your answers.
+1. An origin-centered circle (2D)
+2. An origin-centered sphere (3D)
+https://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_dimension
+

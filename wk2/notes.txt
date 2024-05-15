@@ -1,0 +1,24 @@
+ch 4, p 99- how do you pronounce that?
+
+possible sources of error:
+faulty sensor 
+malicious data
+transcription (human)
+unmodelled / extrinsic influence
+faulty storage / RAM
+
+data is assumed to be IID
+independent and identically distributed
+^ fundamental assumption in many algorithms
+
+cross validation: using some training data (x) as test data (y) 
+split sections of x into folds
+
+vector input: multiple features => hyper plane
+scalar: 0,1,2,3,..
+discrete: yes/no, true/false, 0/1, on/off
+
+best constant in terms of squared error: mean
+
+initial weights should be small random values
+

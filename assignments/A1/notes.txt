@@ -1,0 +1,142 @@
+https://gatech.instructure.com/courses/122126/assignments/557952
+
+plagiarism / citations:
+https://piazza.com/class/kdx36x23bcer4?cid=54
+
+submit:
+README.txt
+dstrube3-analysis.pdf 
+
+got two most liked datasets here:
+https://www.openml.org/search?type=data&sort=nr_of_likes&order=desc
+most liked as of 2020-08-28:
+
+1: https://www.openml.org/d/31
+credit-g
+
+2: https://www.openml.org/d/40536
+SpeedDating - Error on fit due to missing data or bad data types, so changed to :
+phoneme: https://www.openml.org/d/1489
+
+Decision trees with some form of pruning (wk1: ID3) - pre and post
+	https://en.wikipedia.org/wiki/Decision_tree_learning
+	https://scikit-learn.org/stable/modules/tree.html
+	post-pruning is done with ccp_alpha parameter.
+	max_depth param for pre-pruning?
+Neural networks (wk2: ANN / Perceptron) - pytorch?
+	https://scikit-learn.org/stable/modules/neural_networks_supervised.html
+Boosting (wk3: adaboost)
+	https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html
+Support Vector Machines
+	https://scikit-learn.org/stable/modules/svm.html
+K-Nearest Neighbors
+	https://scikit-learn.org/stable/modules/neighbors.html
+
+measuring algorithm performance / accuracy:
+https://scikit-learn.org/stable/modules/model_evaluation.html
+
+https://scikit-learn.org/stable/datasets/index.html#loading-other-datasets
+7.5.3
+
+splitting training /testing data:
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
+
+cross validation:
+https://scikit-learn.org/stable/modules/cross_validation.html
+
+njobs=-1:
+https://stackoverflow.com/questions/32761556/python-scikit-learn-n-jobs
+
+https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html
+
+learning curve
+https://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html#sphx-glr-auto-examples-model-selection-plot-learning-curve-py
+https://www.dataquest.io/blog/learning-curves-machine-learning/
+
+model complexity
+overfitting
+underfitting
+generalizations
+
+data school scikitlearn
+https://www.youtube.com/playlist?list=PL5-da3qGB5ICeMbQuqbbCOQWcS6OYBr5A
+
+command:
+jupyter notebook
+
+grid search - good util but not enough
+learning curve
+model complexity curves
+analysis should include: which hyperparameters were changed, what was the effect?
+confusion matrix
+
+validation is a subset of training;
+test data is removed from training at outset and not touched again till the end
+
+do all 5 algos for dataset 1, then all for dataset 2
+
+X= vec.fit_transform(input)?
+
+https://www.youtube.com/watch?v=cHZONQ2-x7I&feature=emb_title
+1:12:00
+important measures of accuracy:
+precision = true positive / (true positive + false positive)
+recall = true positive / (true positive + false negative)
+f1 score = 2 * ((precision * recall) / (precision + recall))
+metrics.precision_score(y_test, y_pred)
+metrics.recall_score(y_test, y_pred)
+metrics.f1_score(y_test, y_pred)
+metrics.classification_report(y_test, y_pred, target_names=['...', '...', ...])
+
+#alternatives:
+#SpeedDating: https://www.openml.org/d/40536
+#Error on fit due to missing data or bad data types
+#cardiotocography: https://www.openml.org/d/1466
+#2126 instances, initial predict: 40.3% -> 41 -> 38.4
+#blood-transfusion-service-center: https://www.openml.org/d/1464
+#only 748 instances, initial predict: 70% -> 76
+#phoneme: https://www.openml.org/d/1489
+#5404 instances, initial predict: 90.5% -> 84%
+
+#print("metrics accuracy_score:")
+#print(metrics.accuracy_score(yTest,yPred))
+
+import pandas as pd
+data = pd.read_csv('https://www.openml.org/data/get_csv/31/dataset_31_credit-g.arff')
+print(data.head())
+for headerCol in data:
+	print(data[headerCol])
+	print(type(data[headerCol][0]))
+	thisType = type(data[headerCol][0])
+	print(len(data[headerCol]))
+	for i in range(len(data[headerCol])):
+		if type(data[headerCol][i]) != thisType:
+			#Problem at row 8192?
+			print("Problem with headerCol " + headerCol + " at row " + str(i) +"; headerCol type: " + str(thisType) + "; this row type: " + str(type(data[headerCol][i])) +"; value: " + str(data[headerCol][i]))			
+		print(data[headerCol][i])
+		break
+
+print("done")
+
+2020-09-11:
+office hours 3
+3 min mark: learning curve plots:
+performance vs max num of iteration
+training and validation error
+
+Analysis: 
+
+confusion matrix: Given time to search through attribute value weight combinations, fiddling with sample_weight parameter may have given more interesting graphs.
+
+Parameter normalize allows to report ratios instead of counts
+If we want to show the true negatives, false positives, false negatives, and true positives:
+tn, fp, fn, tp = confusion_matrix(y_true, y_pred).ravel()
+
+NN / MLP:
+Alpha increases variance or bias by decreasing and increasing the weights respectively
+
+"loss_curve", and/or "warm_start" + "max_iter"?
+
+===
+feedback:
+The graphs you included did a good job of illustrating the complexity curves of the algorithms they referenced. However, you were missing those curves for Support Vector Machines and for Neural Networks. To really understand the algorithms you'll want to see learning curves for more than just Decision Trees. You did a good job describing your procedure but you were missing any significant analysis, which is the key part of this class. The additional charts could help you here, as could an investigation of why you're seeing what you see in those charts. Your cross validation curve didn't seem to change much. Why is that? You saw very nice complexity curves for the most part, but CCP alpha size showed a sharp drop and then was flat. Why would that be? Why did boosting work best on dataset 1 with 63 estimators while dataset 2 worked best with 31 estimators? How did the bias and variance tradeoff look? How could you have improved the results of the models? What part of how the algorithm works and what part of the makeup of the data could account for those differences? You need to spend more time understanding and answering these types of "why" questions. Really dive into how the algorithms work that lead to the results you're seeing. You've spent a lot of time discussing how your code was put together, the Python version, used libraries, etc... This is not needed for your analysis and is using up space you could have used on a deeper analysis. Including these details in the README is sufficient. In your introduction you spent time discussing why your datasets are interesting on a personal level, but you didn't explore how the datasets differed and why those differences are important to explore the algorithms. It's the impact on the algorithm that's important to the analysis. You said your second dataset required a great deal of tweaking to get the right combination of hyper parameters. What was it about that dataset that caused problems that the first dataset didn't have? You said especially on SVM, what's special about an SVM that would cause that problem? In your conclusion you did a good listing results, but didn't dive into what you learned about the models from those results. Why did Boosting work the best on Dataset 2? Why didn't it work the best on Dataset 1?

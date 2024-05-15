@@ -1,0 +1,67 @@
+README.txt
+dstrube3-analysis.pdf
+
+in mlrose, gradient descent == back propagation:
+https://github.com/hiive/mlrose/blob/master/mlrose_hiive/algorithms/gd.py
+
+varying the problem size: absolutely key for this assignment
+
+Optimize to get the best fitness value you can. Some algorithms might be more sensitive to tuning than others so comparing defaults is not really apples to apples.
+
+DON'T INCLUDE THIS in report:
+learning curves or MCC's. (Good!)
+
+Explain how you did the tuning: GridSearch, then what then what happened
+We expect a couple of plots or table, to show how you did the HP tuning
+
+use the same network structure: # of hidden layers, number of neurons within each hidden layer, activation function to be the same across the problems
+however, you still need to tune other HPs
+
+One dataset from A1
+do the backprop NN part (do the analysis for that too)
+Don't tune backprop NN
+but tune RO NN
+
+For NN, you should be using one of the data sets from A1
+
+compare the perf in terms of run time, metric or interest .. to see why actually
+Is there any advantage to use SA, or GA over BackProp?
+Or what are the reasons that people usually use backprop?
+give some sort of discussion like this ....
+
+MLRose's fitness curve array for NN is also known as Learning Curve (fitness at each training iteration)
+There are 2 Learning Curves:
+1) performance vs number of iterations
+2) performance vs num of training samples
+for iterative problems, did you converge to the final model? and how long did it take to get there?
+That's why we wanted you to plot that for A1 for NN (iterative model)?
+A2 needs to plot those learning curves and
+B/c it's important what is final accuracy and performance is ... but
+also important whether converge or not and how long it took to get to the final performance ...
+
+"The first problem should highlight advantages of your genetic algorithm, the second of simulated annealing, and the third of MIMIC"
+I am going to follow that order. Then after that I will follow up with the neural network writeup
+
+optimization problems: how did I tune my hyper parameters, what made me choose the ones I chose
+
+@15:22 / 52min
+performance vs number of iterations
+& ???
+https://bluejeans.com/s/Zmgvw2hHc7W
+
+convergence plot for both sections:
+for the NN portion as well as the optimization problems.
+
+training split X to X-training and X-test then scale and transform them
+
+four search techniques to these three optimization problems
+Knapsack optimization problem
+https://mlrose.readthedocs.io/en/stable/source/fitness.html#mlrose.fitness.Knapsack
+For the Knapsack optimization problem, 
+
+N-Queens optimization problem
+https://mlrose.readthedocs.io/en/stable/source/fitness.html#mlrose.fitness.Queens
+For the N-Queens optimization problem, I took a 9-Queen setup and used it for each of the four search techniques.
+
+Max-k color optimization problem
+https://mlrose.readthedocs.io/en/stable/source/fitness.html#mlrose.fitness.MaxKColor
